@@ -47,7 +47,7 @@ Average `mean position error (m) / mean orientation error (°)` over the four te
 - **Ours**: computed from the released prediction files in [`predictions/`](predictions/). All training and testing are run on a single NVIDIA RTX 4090 GPU.
 
 | Method | Oxford (paper) | Oxford (ours) | QEOxford (paper) | QEOxford (ours) | NCLT† (paper) | NCLT† (ours) |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | 12.45&nbsp;/&nbsp;2.17 | 15.04&nbsp;/&nbsp;2.17 | 10.79&nbsp;/&nbsp;2.14 | 10.62&nbsp;/&nbsp;2.14 | 7.45&nbsp;/&nbsp;4.58 | 7.45&nbsp;/&nbsp;4.58 |
 | PosePN | 13.48&nbsp;/&nbsp;2.48 | 13.46&nbsp;/&nbsp;2.49 | 9.34&nbsp;/&nbsp;2.25 | 9.34&nbsp;/&nbsp;2.25 | 8.43&nbsp;/&nbsp;6.31 | 8.43&nbsp;/&nbsp;6.30 |
 | PosePN++ | 9.43&nbsp;/&nbsp;1.77 | 8.14&nbsp;/&nbsp;1.79 | 5.13&nbsp;/&nbsp;1.69 | 5.13&nbsp;/&nbsp;1.69 | 5.36&nbsp;/&nbsp;3.52 | 5.36&nbsp;/&nbsp;3.52 |
