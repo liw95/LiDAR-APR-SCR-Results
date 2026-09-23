@@ -1,10 +1,24 @@
+<div align="center">
+
 # LiDAR APR & SCR: Reproduced Results and Predictions
 
-Reproduced results and per-frame predictions of 13 regression-based LiDAR localization methods, covering **absolute pose regression (APR)** and **scene coordinate regression (SCR)**, on **Oxford Radar RobotCar**, **QEOxford** and **NCLT**.
+Reproduced results and per-frame predictions of **13 regression-based LiDAR localization methods**<br>
+covering **absolute pose regression (APR)** and **scene coordinate regression (SCR)**<br>
+on **Oxford Radar RobotCar**, **QEOxford** and **NCLT**
 
-> ⚠️ Results of PointLoc, HypLiLoc and FlashMix are reproduced by us using the official code; all other results are provided by the authors of each method. If you use any results in this repository, please cite the original paper of the corresponding method.
+<p>
+<img src="https://img.shields.io/badge/Methods-13-blue" alt="Methods">
+<img src="https://img.shields.io/badge/Datasets-Oxford%20%7C%20QEOxford%20%7C%20NCLT-orange" alt="Datasets">
+<img src="https://img.shields.io/badge/GPU-RTX%204090-76B900?logo=nvidia&logoColor=white" alt="GPU">
+<img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0%20%7C%20ODbL%201.0-lightgrey" alt="License">
+</p>
 
-## Methods
+[**Methods**](#-methods) · [**Results**](#-results) · [**Detailed Results**](docs/results.md) · [**Prediction Files**](docs/predictions.md) · [**License**](#-license)
+
+
+</div>
+
+## 📚 Methods
 
 ### Absolute Pose Regression (APR)
 
@@ -25,7 +39,7 @@ Reproduced results and per-frame predictions of 13 regression-based LiDAR locali
 - [2024 CVPR] LiSA: LiDAR Localization with Semantic Awareness [[paper]](https://openaccess.thecvf.com/content/CVPR2024/html/Yang_LiSA_LiDAR_Localization_with_Semantic_Awareness_CVPR_2024_paper.html) [[code]](https://github.com/Ybchun/LiSA)
 - [2023 CVPR] SGLoc: Scene Geometry Encoding for Outdoor LiDAR Localization [[paper]](https://openaccess.thecvf.com/content/CVPR2023/html/Li_SGLoc_Scene_Geometry_Encoding_for_Outdoor_LiDAR_Localization_CVPR_2023_paper.html) [[code]](https://github.com/liw95/SGLoc)
 
-## Results
+## 📊 Results
 
 Average `mean position error (m) / mean orientation error (°)` over the four test sequences of each dataset.
 
@@ -52,16 +66,16 @@ Average `mean position error (m) / mean orientation error (°)` over the four te
 
 † On NCLT 2012-05-26, frames 4300–4500 (a region unseen in training) are excluded, following LightLoc.
 
-## More
+## 📁 More
 
 - [Evaluation protocol, per-sequence results, recall and efficiency](docs/results.md)
 - [Prediction file format](docs/predictions.md)
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
-We thank the authors of all the methods above for releasing their code.
+We thank the authors of all the methods above for releasing their code. If you use any results in this repository, please cite the original paper of the corresponding method.
 
-## License
+## 📄 License
 
 The released files are derived from datasets with different licenses, so each part follows the license of its source dataset:
 
