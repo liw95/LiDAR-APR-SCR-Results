@@ -7,8 +7,8 @@
 - **MPE / MedPE**: mean / median position error in meters.
 - **MOE / MedOE**: mean / median orientation error in degrees.
 - **Recall@X m**: percentage of test frames with position error below X m (X = 10, 9, …, 1).
-- **NCLT 2012-05-26\***: frames 4300–4500 (lines 4300–4500 of the prediction files, 201 frames) are excluded from all reported metrics. The released prediction files still contain these frames. For methods whose rows are not aligned with the standard ground truth (DiffLoc, LightLoc, GTR-Loc), the same frames are identified by matching `gt_t` to the standard ground truth.
-- **Hardware**: all training and testing are run on a single NVIDIA RTX 4090 GPU. Runtime and GPU memory are measured with batch size 1.
+- **NCLT 2012-05-26\***: Frames 4300–4500 (lines 4300–4500 of the prediction files, 201 frames) are excluded from all reported metrics. The released prediction files still contain these frames.
+- **Hardware**: All training and testing are performed on a single NVIDIA RTX 4090 GPU. Runtime and GPU memory are measured with a batch size of 1.
 
 ## Per-Sequence Results
 
