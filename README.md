@@ -2,7 +2,7 @@
 
 Reproduced results and per-frame predictions of 13 regression-based LiDAR localization methods, covering **absolute pose regression (APR)** and **scene coordinate regression (SCR)**, on **Oxford Radar RobotCar**, **QEOxford** and **NCLT**.
 
-> ⚠️ This is an unofficial reproduction. All credit for the methods goes to their authors; please cite the original papers.
+> ⚠️ Results of PointLoc, HypLiLoc and FlashMix are reproduced by us using the official code; all other results are provided by the authors of each method. If you use any results in this repository, please cite the original paper of the corresponding method.
 
 ## Methods
 
