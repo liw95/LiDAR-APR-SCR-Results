@@ -1,0 +1,27 @@
+Copyright (c) 2026 Wen Li and contributors
+
+This repository contains material derived from datasets with different licenses.
+Each part is released under a license compatible with its source dataset.
+
+1. Oxford Radar RobotCar and QEOxford
+   Files:   predictions/*/Oxford/, predictions/*/QEOxford/
+   License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+            (CC BY-NC-SA 4.0)
+            Summary:    https://creativecommons.org/licenses/by-nc-sa/4.0/
+            Legal code: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+2. NCLT
+   Files:   predictions/*/NCLT/
+   License: Open Database License v1.0 (ODbL 1.0); rights in individual contents
+            of the database are licensed under the Database Contents License v1.0
+            (DbCL 1.0), following the license of the NCLT dataset.
+            ODbL 1.0: http://opendatacommons.org/licenses/odbl/1.0/
+            DbCL 1.0: http://opendatacommons.org/licenses/dbcl/1.0/
+
+3. Everything else (README, docs/, experiments_summary.csv)
+   License: CC BY-NC-SA 4.0
+
+The ground-truth poses included in the prediction files are derived from the
+datasets above. When using this material, please cite the corresponding dataset
+papers as well as the original papers of the localization methods, which belong
+to their respective authors.

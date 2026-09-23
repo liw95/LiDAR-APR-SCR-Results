@@ -8,11 +8,11 @@
 - **MOE / MedOE**: mean / median orientation error in degrees.
 - **Recall@X m**: percentage of test frames with position error below X m (X = 10, 9, …, 1).
 - **NCLT 2012-05-26\***: frames 4300–4500 (lines 4300–4500 of the prediction files, 201 frames) are excluded from all reported metrics. The released prediction files still contain these frames. For methods whose rows are not aligned with the standard ground truth (DiffLoc, LightLoc, GTR-Loc), the same frames are identified by matching `gt_t` to the standard ground truth.
-- **Hardware**: `all training and testing are run on a single NVIDIA RTX 4090 GPU. Runtime and GPU memory are measured with batch size 1.
+- **Hardware**: all training and testing are run on a single NVIDIA RTX 4090 GPU. Runtime and GPU memory are measured with batch size 1.
 
 ## Per-Sequence Results
 
-Median errors and Recall@X m (percentage of frames with position error below X m).
+Mean and median errors, and Recall@X m (percentage of frames with position error below X m).
 
 ### Oxford
 
@@ -20,7 +20,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>Oxford – 15-13-06-37</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 16.08 | 11.58 | 2.26 | 1.07 | 39.93 | 33.41 | 26.63 | 20.60 | 15.02 | 9.94 | 5.93 | 2.76 | 0.93 | 0.14 |
 | PosePN | APR | 14.32 | 4.84 | 3.04 | 0.71 | 82.39 | 79.96 | 76.28 | 71.17 | 63.42 | 52.29 | 37.40 | 21.59 | 8.22 | 1.16 |
 | PosePN++ | APR | 7.75 | 5.16 | 1.99 | 1.12 | 88.22 | 85.55 | 81.23 | 73.98 | 62.71 | 47.35 | 30.90 | 15.96 | 5.74 | 0.78 |
@@ -41,7 +41,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>Oxford – 17-13-26-39</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 16.22 | 11.61 | 2.50 | 1.53 | 41.13 | 35.19 | 28.63 | 21.79 | 15.19 | 9.29 | 4.90 | 2.01 | 0.51 | 0.04 |
 | PosePN | APR | 16.97 | 5.46 | 2.49 | 0.75 | 76.33 | 73.39 | 69.58 | 64.36 | 56.00 | 43.90 | 29.26 | 15.41 | 5.10 | 0.66 |
 | PosePN++ | APR | 10.66 | 5.87 | 1.92 | 1.07 | 81.13 | 76.93 | 71.08 | 62.87 | 51.65 | 37.76 | 22.86 | 9.59 | 2.44 | 0.26 |
@@ -62,7 +62,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>Oxford – 17-14-03-00</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 14.86 | 11.60 | 1.92 | 1.04 | 40.89 | 34.58 | 27.92 | 21.14 | 14.53 | 8.80 | 4.27 | 1.63 | 0.42 | 0.04 |
 | PosePN | APR | 13.42 | 5.23 | 2.62 | 0.79 | 80.32 | 77.79 | 74.08 | 68.45 | 59.62 | 46.38 | 29.00 | 13.66 | 4.89 | 0.86 |
 | PosePN++ | APR | 7.55 | 5.38 | 1.54 | 1.07 | 88.07 | 84.85 | 79.61 | 71.38 | 59.24 | 43.81 | 26.80 | 12.73 | 4.07 | 0.40 |
@@ -83,7 +83,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>Oxford – 18-14-14-42</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 12.99 | 10.21 | 1.98 | 1.15 | 48.63 | 42.07 | 34.67 | 26.78 | 19.70 | 13.37 | 8.10 | 4.10 | 1.42 | 0.16 |
 | PosePN | APR | 9.14 | 3.43 | 1.80 | 0.82 | 88.68 | 86.90 | 84.46 | 80.99 | 76.15 | 69.14 | 58.52 | 41.95 | 19.37 | 2.77 |
 | PosePN++ | APR | 6.60 | 4.11 | 1.71 | 1.27 | 93.02 | 91.17 | 88.21 | 83.34 | 75.37 | 63.82 | 48.09 | 27.32 | 10.19 | 1.51 |
@@ -106,7 +106,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>QEOxford – 15-13-06-37</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 10.61 | 8.08 | 2.36 | 1.43 | 63.76 | 57.23 | 49.41 | 41.00 | 32.62 | 24.63 | 17.04 | 10.17 | 4.74 | 1.22 |
 | PosePN | APR | 9.47 | 3.58 | 2.80 | 0.86 | 89.07 | 87.57 | 85.23 | 81.66 | 76.11 | 68.19 | 56.12 | 41.13 | 24.79 | 8.24 |
 | PosePN++ | APR | 4.54 | 3.51 | 1.83 | 1.13 | 96.49 | 95.41 | 93.39 | 89.81 | 83.03 | 72.47 | 58.22 | 40.67 | 22.68 | 6.56 |
@@ -127,7 +127,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>QEOxford – 17-13-26-39</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 11.44 | 8.08 | 2.21 | 1.31 | 63.88 | 57.15 | 49.31 | 40.81 | 32.04 | 23.27 | 15.74 | 9.44 | 4.46 | 1.04 |
 | PosePN | APR | 12.98 | 3.47 | 2.35 | 0.92 | 86.54 | 84.88 | 82.43 | 79.21 | 74.54 | 67.34 | 56.99 | 42.60 | 24.31 | 7.14 |
 | PosePN++ | APR | 6.44 | 3.39 | 1.78 | 1.03 | 96.42 | 95.53 | 93.62 | 90.04 | 84.23 | 74.13 | 60.38 | 42.46 | 21.65 | 6.06 |
@@ -148,7 +148,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>QEOxford – 17-14-03-00</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 10.90 | 8.16 | 1.92 | 1.46 | 62.94 | 56.12 | 48.72 | 41.21 | 33.24 | 25.19 | 17.17 | 10.17 | 4.59 | 1.10 |
 | PosePN | APR | 8.63 | 3.29 | 2.19 | 0.91 | 88.10 | 86.65 | 84.68 | 81.72 | 77.17 | 70.27 | 59.92 | 45.38 | 27.36 | 8.77 |
 | PosePN++ | APR | 4.89 | 3.33 | 1.54 | 1.07 | 95.40 | 94.31 | 92.27 | 88.89 | 82.97 | 73.49 | 60.81 | 44.02 | 24.75 | 6.87 |
@@ -169,7 +169,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>QEOxford – 18-14-14-42</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 9.51 | 7.46 | 2.07 | 1.50 | 68.24 | 61.79 | 54.37 | 46.08 | 37.17 | 28.01 | 19.29 | 11.52 | 5.45 | 1.32 |
 | PosePN | APR | 6.26 | 2.92 | 1.64 | 0.95 | 92.65 | 91.51 | 89.90 | 87.55 | 83.78 | 77.49 | 66.65 | 51.50 | 31.52 | 9.80 |
 | PosePN++ | APR | 4.64 | 3.36 | 1.61 | 1.16 | 97.47 | 96.62 | 94.96 | 91.49 | 85.12 | 74.52 | 60.99 | 43.09 | 23.89 | 6.61 |
@@ -192,7 +192,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>NCLT – 2012-02-12</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 7.23 | 5.44 | 4.88 | 3.13 | 83.17 | 78.33 | 72.24 | 64.70 | 55.59 | 45.42 | 34.52 | 22.65 | 11.39 | 3.23 |
 | PosePN | APR | 9.45 | 2.17 | 7.47 | 2.31 | 86.12 | 84.62 | 82.91 | 80.92 | 78.13 | 74.59 | 69.41 | 61.29 | 46.69 | 20.94 |
 | PosePN++ | APR | 4.97 | 2.86 | 3.75 | 2.02 | 95.44 | 94.36 | 92.85 | 90.56 | 86.77 | 80.67 | 70.00 | 53.05 | 30.19 | 8.56 |
@@ -213,7 +213,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>NCLT – 2012-02-19</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 6.31 | 5.03 | 3.89 | 2.87 | 86.00 | 81.67 | 75.86 | 68.73 | 59.96 | 49.59 | 37.87 | 25.65 | 13.20 | 3.55 |
 | PosePN | APR | 6.15 | 1.66 | 5.05 | 1.92 | 91.64 | 90.97 | 90.14 | 89.10 | 87.63 | 85.21 | 81.47 | 74.16 | 59.11 | 27.28 |
 | PosePN++ | APR | 3.69 | 2.74 | 2.65 | 1.81 | 96.76 | 95.90 | 94.56 | 91.90 | 87.47 | 81.08 | 71.37 | 55.71 | 32.05 | 9.60 |
@@ -234,7 +234,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>NCLT – 2012-03-31</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 6.71 | 5.25 | 4.32 | 2.94 | 85.49 | 80.81 | 74.88 | 67.10 | 57.62 | 47.19 | 35.33 | 22.89 | 11.95 | 3.24 |
 | PosePN | APR | 5.79 | 1.60 | 5.28 | 1.91 | 93.54 | 93.05 | 92.49 | 91.75 | 90.52 | 88.54 | 84.91 | 77.41 | 60.68 | 27.80 |
 | PosePN++ | APR | 4.35 | 2.75 | 3.38 | 1.88 | 96.58 | 95.99 | 95.03 | 93.10 | 89.09 | 82.30 | 72.18 | 55.49 | 32.10 | 10.18 |
@@ -255,7 +255,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 <summary><b>NCLT – 2012-05-26*</b></summary>
 
 | Method | Type | MPE (m) | MedPE (m) | MOE (°) | MedOE (°) | 10m | 9m | 8m | 7m | 6m | 5m | 4m | 3m | 2m | 1m |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 9.55 | 5.61 | 5.21 | 3.14 | 79.54 | 75.07 | 69.19 | 62.02 | 53.80 | 43.97 | 33.29 | 21.92 | 11.27 | 3.06 |
 | PosePN | APR | 12.31 | 1.97 | 7.42 | 2.13 | 87.54 | 86.68 | 85.61 | 84.28 | 82.48 | 79.79 | 74.97 | 66.67 | 50.76 | 22.77 |
 | PosePN++ | APR | 8.42 | 2.96 | 4.30 | 2.00 | 91.51 | 90.30 | 88.52 | 86.06 | 81.98 | 76.01 | 66.22 | 50.80 | 29.55 | 9.45 |
@@ -279,7 +279,7 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 ### Oxford / QEOxford
 
 | Method | Type | Training Time | Parameter | Store | Running time | GPU Memory | FLOPs |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 125 hrs. | 2 M | 7 MB | 625 ms | 429.48 MB | 11.67 G |
 | PosePN | APR | 5 hrs. | 4 M | 18 MB | 2 ms | 67.45 MB | 1.26 G |
 | PosePN++ | APR | 11 hrs. | 5 M | 20 MB | 111 ms | 142.25 MB | 0.51 G |
@@ -297,12 +297,12 @@ Median errors and Recall@X m (percentage of frames with position error below X m
 ### NCLT
 
 | Method | Type | Training Time | Parameter | Store | Running time | GPU Memory | FLOPs |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | PointLoc | APR | 85 hrs. | 2 M | 7 MB | 614 ms | 429.48 MB | 11.67 G |
 | PosePN | APR | 3 hrs. | 4 M | 18 MB | 2 ms | 67.45 MB | 1.26 G |
 | PosePN++ | APR | 8 hrs. | 5 M | 20 MB | 108 ms | 142.25 MB | 0.51 G |
 | PoseMinkLoc | APR | 5 hrs. | 13 M | 53 MB | 8 ms | 104.09 MB | 0.48 G |
-| PoseSOE | APR | 10 hrs. | 5 M | 20 MB | 230 ms | 247.89 MB | 1.04G |
+| PoseSOE | APR | 10 hrs. | 5 M | 20 MB | 230 ms | 247.89 MB | 1.04 G |
 | HypLiLoc | APR | 12 hrs. | 52 M | 209 MB | 21 ms | 644.49 MB | 4.92 G |
 | FlashMix | APR | 1 hr. | 18 M | 73 MB | 30 ms | 169.98 MB | 3.30 G |
 | DiffLoc | APR | 100 hrs. | 40 M | 153 MB | 44 ms | 892.51 MB | 150.25 G |

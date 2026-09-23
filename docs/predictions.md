@@ -24,7 +24,7 @@ predictions/
 Each sequence folder contains plain-text files with one row per test frame, space-separated, in the same frame order across files:
 
 | File | Columns | Description |
-| --- | --- | --- |
+| --- | :---: | --- |
 | `gt_t.txt` | `x y z` | Ground-truth position (m) |
 | `pred_t.txt` | `x y z` | Predicted position (m) |
 | `gt_q.txt` | `qw qx qy qz` | Ground-truth orientation (unit quaternion) |
@@ -35,17 +35,17 @@ Each sequence folder contains plain-text files with one row per test frame, spac
 Orientation files provided by each method (all methods provide `gt_t`, `pred_t`, `error_t` and `error_q` for every sequence):
 
 | Method | `gt_q` | `pred_q` |
-| --- | :-: | :-: |
-| PointLoc | | QEOxford, NCLT |
-| PosePN | | |
-| PosePN++ | | QEOxford, NCLT |
-| PoseMinkLoc | | QEOxford, NCLT |
-| PoseSOE | | QEOxford, NCLT |
+| --- | :---: | :---: |
+| PointLoc | – | QEOxford, NCLT |
+| PosePN | – | – |
+| PosePN++ | – | QEOxford, NCLT |
+| PoseMinkLoc | – | QEOxford, NCLT |
+| PoseSOE | – | QEOxford, NCLT |
 | HypLiLoc | ✓ | ✓ |
-| FlashMix | | ✓ |
-| DiffLoc | | |
-| SGLoc | | |
-| LiSA | | ✓ |
-| RALoc | | ✓ |
+| FlashMix | – | ✓ |
+| DiffLoc | – | – |
+| SGLoc | – | – |
+| LiSA | – | ✓ |
+| RALoc | – | ✓ |
 | LightLoc | ✓ | ✓ |
 | GTR-Loc | ✓ | ✓ |
