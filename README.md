@@ -22,6 +22,7 @@ on **Oxford Radar RobotCar**, **QEOxford** and **NCLT**
 
 ### Absolute Pose Regression (APR)
 
+- [2026 ECCV] Learning 1-Bit LiDAR-based Localization with Auxiliary Objective [[paper]](https://link.springer.com/chapter/10.1007/978-3-032-37356-4_20) [[code]](https://github.com/exaids66/BiLoc)
 - [2025 IROS] BEVDiffLoc: End-to-End LiDAR Global Localization in BEV View Based on Diffusion Model [[paper]](https://ieeexplore.ieee.org/abstract/document/11246131) [[code]](https://github.com/nubot-nudt/BEVDiffLoc)
 - [2025 WACV] FlashMix: Fast Map-Free LiDAR Localization via Feature Mixing and Contrastive-Constrained Accelerated Training [[paper]](https://openaccess.thecvf.com/content/WACV2025/html/Goswami_FlashMix_Fast_Map-Free_LiDAR_Localization_via_Feature_Mixing_and_Contrastive-Constrained_WACV_2025_paper.html) [[code]](https://github.com/raktimgg/FlashMix)
 - [2024 CVPR] DiffLoc: Diffusion Model for Outdoor LiDAR Localization [[paper]](https://openaccess.thecvf.com/content/CVPR2024/html/Li_DiffLoc_Diffusion_Model_for_Outdoor_LiDAR_Localization_CVPR_2024_paper.html) [[code]](https://github.com/liw95/DiffLoc)
@@ -33,6 +34,7 @@ on **Oxford Radar RobotCar**, **QEOxford** and **NCLT**
 
 ### Scene Coordinate Regression (SCR)
 
+- [2026 CVPR] LEADER: Learning Reliable Local-to-Global Correspondences for LiDAR Relocalization [[paper]](https://openaccess.thecvf.com/content/CVPR2026/html/Wu_LEADER_Learning_Reliable_Local-to-Global_Correspondences_for_LiDAR_Relocalization_CVPR_2026_paper.html) [[code]](https://github.com/JiansW/LEADER)
 - [2025 NeurIPS] GTR-Loc: Geospatial Text Regularization Assisted Outdoor LiDAR Localization [[paper]](https://proceedings.neurips.cc/paper_files/paper/2025/hash/c745bfa5b50544882938ff4f89ff26ac-Abstract-Conference.html) [[code]](https://github.com/PSYZ1234/GTR-Loc)
 - [2025 ICCV] RALoc: Enhancing Outdoor LiDAR Localization via Rotation Awareness [[paper]](https://openaccess.thecvf.com/content/ICCV2025/html/Yang_RALoc_Enhancing_Outdoor_LiDAR_Localization_via_Rotation_Awareness_ICCV_2025_paper.html) [[project]](https://etheryangyy.github.io/raloc.github.io/)
 - [2025 CVPR] LightLoc: Learning Outdoor LiDAR Localization at Light Speed [[paper]](https://openaccess.thecvf.com/content/CVPR2025/html/Li_LightLoc_Learning_Outdoor_LiDAR_Localization_at_Light_Speed_CVPR_2025_paper.html) [[code]](https://github.com/liw95/LightLoc)
