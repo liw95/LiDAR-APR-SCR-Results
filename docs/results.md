@@ -274,7 +274,7 @@ Mean and median errors, and Recall@X m (percentage of frames with position error
 
 ## Efficiency
 
-**Store**: storage size of the model parameters. **FLOPs**: 1 MAC = 2 FLOPs, batch size 1.
+**Store**: storage size of the model parameters. **Running time**: measured from the network input to the output, batch size 1. **FLOPs**: 1 MAC = 2 FLOPs, batch size 1.
 
 ### Oxford / QEOxford
 
@@ -288,11 +288,13 @@ Mean and median errors, and Recall@X m (percentage of frames with position error
 | HypLiLoc | APR | 17 hrs. | 52 M | 209 MB | 21 ms | 644.49 MB | 4.92 G |
 | FlashMix | APR | 1 hr. | 18 M | 73 MB | 30 ms | 169.98 MB | 3.30 G |
 | DiffLoc | APR | 145 hrs. | 40 M | 153 MB | 33 ms | 892.51 MB | 150.24 G |
+| BiLoc† | APR | 239 hrs. | 3 M | 12 MB | 338 ms | 180.34 MB | 0.34 G |
 | SGLoc | SCR | 50 hrs. | 104 M | 414 MB | 38 ms | 876.45 MB | 159.39 G |
 | LiSA | SCR | 53 hrs. | 104 M | 414 MB | 38 ms | 876.45 MB | 159.39 G |
 | RALoc | SCR | 98 hrs. | 104 M | 414 MB | 38 ms | 1034.53 MB | 178.90 G |
-| LightLoc | SCR | 1 hr. | 22 M | 86 MB | 29 ms | 104.16 MB | 18.41 G |
-| GTR-Loc | SCR | 4 hrs. | 22 M | 86 MB | 29 ms | 104.16 MB | 18.41 G |
+| LightLoc | SCR | 1 hr. | 22 M | 75 MB | 29 ms | 104.16 MB | 18.41 G |
+| GTR-Loc | SCR | 4 hrs. | 22 M | 75 MB | 29 ms | 104.16 MB | 18.41 G |
+| LEADER‡ | SCR | 108 hrs. | 73 M | 279 MB | 277 ms | 398.91 MB | 45.80 G |
 
 ### NCLT
 
@@ -306,9 +308,15 @@ Mean and median errors, and Recall@X m (percentage of frames with position error
 | HypLiLoc | APR | 12 hrs. | 52 M | 209 MB | 21 ms | 644.49 MB | 4.92 G |
 | FlashMix | APR | 1 hr. | 18 M | 73 MB | 30 ms | 169.98 MB | 3.30 G |
 | DiffLoc | APR | 100 hrs. | 40 M | 153 MB | 44 ms | 892.51 MB | 150.25 G |
+| BiLoc† | APR | 197 hrs. | 3 M | 12 MB | 486 ms | 180.34 MB | 0.34 G |
 | SGLoc | SCR | 42 hrs. | 104 M | 414 MB | 75 ms | 929.04 MB | 207.15 G |
 | LiSA | SCR | 44 hrs. | 104 M | 414 MB | 75 ms | 929.04 MB | 207.15 G |
 | RALoc | SCR | 88 hrs. | 104 M | 414 MB | 75 ms | 1035.18 MB | 227.80 G |
-| LightLoc | SCR | 1 hr. | 23 M | 92 MB | 48 ms | 112.44 MB | 21.45 G |
-| GTR-Loc | SCR | 4 hrs. | 23 M | 92 MB | 48 ms | 112.44 MB | 21.45 G |
+| LightLoc | SCR | 1 hr. | 23 M | 78 MB | 48 ms | 112.44 MB | 21.45 G |
+| GTR-Loc | SCR | 4 hrs. | 23 M | 78 MB | 48 ms | 112.44 MB | 21.45 G |
+| LEADER‡ | SCR | 90 hrs. | 73 M | 279 MB | 241 ms | 402.84 MB | 39.48 G |
+
+† BiLoc's efficiency is measured under FP32 simulation: its released code lacks the TC-BNN implementation, so the binarized network is simulated with FP32 operations.
+
+‡ LEADER's latency is dominated by CPU-side overhead within the forward pass: its 36 circular-padding convolutions rebuild coordinate maps ~72 times, leaving GPU utilization at only 1–3%.
 
